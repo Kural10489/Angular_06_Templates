@@ -1,0 +1,35 @@
+.secoundchild{
+    border: black solid 2px;
+    margin: 8px 8px 10px 8px;
+}
+p{
+    border-bottom: red 2px solid;
+    
+}
+
+.childcomponent{
+    border: black solid 2px;
+    margin: 8px 8px 10px 8px;
+}
+p{
+    border-bottom: red 2px solid;
+    
+}
+table{
+    border: black solid;
+    margin: 10px;
+    padding: 10px;
+}
+table th{
+    border-bottom: black solid;
+
+}
+table td{
+    text-align: center;
+}
+.firststyle{
+    background-color: yellow;
+}
+.secoundstyle{
+    background-color: lavender;
+}

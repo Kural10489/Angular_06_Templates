@@ -1,0 +1,51 @@
+<div class="secoundchild">
+    <p>Child component-2</p>
+    
+    <!-- Structural Directives -->
+    <h4>Structural Directives ngfor</h4>
+    <table>
+        <tr>
+            <th>ACE Number</th>
+            <th>Name</th>
+            <th>Domain</th>
+        </tr>
+        <tr *ngFor="
+         let i of nameArray;
+         let indexOfName=index;
+         let even=even;
+         let odd=odd;
+        "  [ngClass]='{firststyle:odd,secoundstyle:even}'>
+            <td>{{indexOfName}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.domain}}</td>
+        </tr>
+    </table>
+    
+    <ul *ngFor="let i of arr;">
+        
+        <li>{{i.type}}</li>
+        <ul>
+            <li *ngFor="let course of i.course">
+              {{course.name}}
+            </li>
+        </ul>
+    </ul>
+    
+    <h4>ngIF</h4>
+    <button (click)="Login()" class='btn btn-outline-primary'>Login</button>  <button (click)="Logout()" class="btn btn-outline-dark">Logout</button>
+    <!-- <div *ngIf="isLoggedIn && isExistingUser">
+      <h3>Welcome Back {{name}} !</h3>
+    </div> -->
+    
+    <ng-container *ngIf="isLoggedIn; then loggedIn;else logout">
+    
+    </ng-container>
+    <ng-template #loggedIn>
+    Welcome Back {{name}} !
+    </ng-template>
+    
+    
+    <ng-template #logout>
+     Please Login
+      </ng-template>
+    </div>
