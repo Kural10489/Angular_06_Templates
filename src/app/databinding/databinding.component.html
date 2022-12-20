@@ -1,0 +1,31 @@
+ <!-- Event Binding -->
+ <h4>Event Binding</h4>
+ <h1>{{title}}</h1>
+ <button (click)="title='One Way Binding'"  class="btn btn-outline-warning">Change title</button> <br> <br>
+ <input type="text" (keyup)="event($event)">
+
+ <!-- Template statement -->
+ <h4>Template Statement</h4>
+ <h3 [hidden]="hide" >{{getDbzCharecters()}}</h3>
+ <button (click)="toggle()" [attr.id]="attributeVal" class="btn btn-outline-success">Hide</button>
+
+ <div class="childcomponent">
+    <p>Child Component</p>
+    
+    
+    <!-- Two Way Binding-->
+    <h4>Two Way Binding</h4>
+    <p>(View to Ts) (ts to view)</p>
+    <!-- <input type="text" [(ngModel)]="name"> -->
+    {{name}}
+    <br>
+    <h4>Pipes</h4>
+    Date: {{date|date:'dd-MMM-yyyy'}} <hr>
+    Currency: {{currency|currency:"INR"}} <hr>
+    Object: {{Object|json}} <hr>
+    Sliced Array :{{arr|slice:2}} <hr>
+    Multiple Pipes :{{Object|keyvalue|json}} <hr>
+    Custom pipes: 
+    <!-- <input type="number" [(ngModel)]="age"> -->
+     <!-- <input type="text" [(ngModle)]="age"> -->
+    </div>
